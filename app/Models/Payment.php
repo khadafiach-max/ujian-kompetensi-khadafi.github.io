@@ -13,4 +13,14 @@ class Payment extends Model
         'payment_date',
         'method',
     ];
+
+    public function students()
+    {
+        return $this->hasMany(Students::class, 'student_id');
+    }
+
+    public function invoice()
+    {
+        return $this->belongTo(Invoice::class, 'invoice_id');
+    }
 }

@@ -10,6 +10,10 @@ class Transaction extends Model
         'payment_id',
         'amount',
         'date',
-        'type',
     ];
+
+    public function payment()
+    {
+        return $this->hasMany(Payment::class, 'payment_id');
+    }
 }

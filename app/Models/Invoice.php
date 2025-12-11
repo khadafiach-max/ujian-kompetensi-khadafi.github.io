@@ -13,4 +13,13 @@ class Invoice extends Model
         'amount',
         'status',
     ];
+
+    public function students()
+    {
+        return $this->belongTo(Students::class, 'student_id');
+    }
+    public function sppplan()
+    {
+        return $this->hasMany(SPPPlan::class, 'spp_id');
+    }
 }
