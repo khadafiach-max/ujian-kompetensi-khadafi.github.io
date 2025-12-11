@@ -20,7 +20,7 @@ class StudentsViewResource extends Resource
 {
     protected static ?string $model = Students::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?string $navigationGroup = 'Manajemen Daftar Santri';
     protected static ?string $navigationLabel = 'Santri';
     protected static ?string $modelLabel = 'Santri';

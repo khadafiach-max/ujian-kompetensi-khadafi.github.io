@@ -15,17 +15,17 @@ class StatsDashboard extends BaseWidget
         return [
             Stat::make('Nominal SPP', 'Rp ' . number_format(Transaction::sum('amount'), 0, ',', '.'))
                 ->description('Total SPP')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+                ->descriptionIcon('heroicon-o-arrows-pointing-in')
                 ->color('success'),
 
             Stat::make('Jumlah Santri', Students::whereMonth('created_at', now()->month)->count())
-                ->description('Dalam 30 hari terakhir')
-                ->descriptionIcon('heroicon-m-users')
+                ->description('Yang ada dalam Sekolah')
+                ->descriptionIcon('heroicon-o-user-group')
                 ->color('warning'),
 
             Stat::make('Total Tarif SPP', SPPPlan::sum('amount'))
                 ->description('Jumlah Tarif SPP')
-                ->descriptionIcon('heroicon-m-star')
+                ->descriptionIcon('heroicon-o-bookmark-square')
                 ->color('info'),
         ];
     }

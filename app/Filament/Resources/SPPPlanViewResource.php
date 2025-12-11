@@ -19,7 +19,7 @@ class SPPPlanViewResource extends Resource
 {
     protected static ?string $model = SPPPlan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
     protected static ?string $navigationGroup = 'Manajemen Pembayaran SPP';
     protected static ?string $navigationLabel = 'Tarif SPP';
     protected static ?string $modelLabel = 'Tarif';

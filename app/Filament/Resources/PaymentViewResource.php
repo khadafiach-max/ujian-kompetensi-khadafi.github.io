@@ -21,7 +21,7 @@ class PaymentViewResource extends Resource
 {
     protected static ?string $model = Payment::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-banknotes';
     protected static ?string $navigationGroup = 'Manajemen Pembayaran SPP';
     protected static ?string $navigationLabel = 'Pembayaran SPP';
     protected static ?string $modelLabel = 'Pembayaran';
@@ -31,10 +31,10 @@ class PaymentViewResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('invoice_id')
+                TextInput::make('invoice_id')
                 ->label('ID Tagihan yang dibayar'),
 
-                Select::make('student_id')
+                TextInput::make('student_id')
                 ->label('ID Santri'),
 
                 TextInput::make('amount')

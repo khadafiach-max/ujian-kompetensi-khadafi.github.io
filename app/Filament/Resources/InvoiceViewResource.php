@@ -21,7 +21,7 @@ class InvoiceViewResource extends Resource
 {
     protected static ?string $model = Invoice::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-arrow-up-on-square-stack';
     protected static ?string $navigationGroup = 'Manajemen Pembayaran SPP';
     protected static ?string $navigationLabel = 'Tagihan SPP';
     protected static ?string $modelLabel = 'Tagihan';
@@ -32,10 +32,10 @@ class InvoiceViewResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('student_id')
+                TextInput::make('student_id')
                 ->label('ID Santri'),
 
-                Select::make('spp_id')
+                TextInput::make('spp_id')
                 ->label('ID SPP'),
 
                 TextInput::make('peroid')

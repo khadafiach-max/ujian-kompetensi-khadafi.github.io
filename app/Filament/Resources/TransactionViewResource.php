@@ -7,7 +7,6 @@ use App\Filament\Resources\TransactionViewResource\RelationManagers;
 use App\Models\Transaction;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Resources\Resource;
@@ -21,7 +20,7 @@ class TransactionViewResource extends Resource
 {
     protected static ?string $model = Transaction::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
     protected static ?string $navigationGroup = 'Manajemen Keuangan';
     protected static ?string $navigationLabel = 'Laporan Keuangan';
     protected static ?string $modelLabel = 'Laporan';
@@ -32,7 +31,7 @@ class TransactionViewResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('payment_id')
+                TextInput::make('payment_id')
                 ->label('ID Pembayaran'),
 
                 TextInput::make('amount')
